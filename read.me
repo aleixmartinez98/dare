@@ -1,0 +1,25 @@
+1. La primera request que se debe ejecutar es http://localhost:3000/login,
+esta devolverá el token de acceso y el tipo. Si los credenciales son incorrectos devolverá un error.
+Los credenciales se comprueban directamente desde la api de swagger.
+
+2. Una vez ejecutado el login se guardará el token en una constante
+y a través de esa constante podremos hacer todas las peticiones.
+
+3. Todas las peticiones van contra la api de swagger, y el uso de la información se hace directamente desde el json de la api.
+
+4. Ejemplos de consultas.
+
+GET: http://localhost:3000/clients?limit=10
+GET: http://localhost:3000/clients/a0ece5db-cd14-4f21-812f-966633e7be86
+GET: http://localhost:3000/clients/a0ece5db-cd14-4f21-812f-966633e7be86/policies
+GET: http://localhost:3000/polices?limit=10
+POST: http://localhost:3000/login Body: username and password.
+GET: http://localhost:3000/policies?limit=10
+GET: http://localhost:3000/policies/64cceef9-3a01-49ae-a23b-3761b604800b
+
+Todas estas requests las he ejecutado desde el postman.
+
+5. El testing debería hablar con el responsable del proyecto, ya que no he hecho nunca el tipo de testing en nodejs que pedís.
+Siempre lo he hecho con java.
+
+6. Si la api rest no es lo que pedís en el proyecto, comentármelo y lo vuelvo a hacer.
